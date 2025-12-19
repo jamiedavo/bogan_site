@@ -247,6 +247,7 @@ textarea{ resize: vertical; }
   .hero{ grid-template-columns: 1fr; }
   .grid{ grid-template-columns: repeat(2, 1fr); }
   .drop{ grid-template-columns: 1fr; }
+  
 }
 @media (max-width: 520px){
   .site-header{
@@ -280,5 +281,6 @@ textarea{ resize: vertical; }
   .grid{ grid-template-columns: 1fr; }
   .two{ grid-template-columns: 1fr; }
 }
+
 
 
