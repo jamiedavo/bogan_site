@@ -249,7 +249,36 @@ textarea{ resize: vertical; }
   .drop{ grid-template-columns: 1fr; }
 }
 @media (max-width: 520px){
-  .nav{ gap: 10px; }
+  .site-header{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+  }
+
+  .logo{
+    font-size: 1.3rem;
+  }
+
+  .nav{
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .nav a{
+    font-size: 0.95rem;
+  }
+
+  .btn-small{
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* existing rules */
   .grid{ grid-template-columns: 1fr; }
   .two{ grid-template-columns: 1fr; }
 }
+
+
