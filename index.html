@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BOGAN.CO.NZ — The Sensitive Bogan</title>
+  <meta name="description" content="Bogan apparel & prints. Rough edges. Soft insides. Made in Aotearoa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#">BOGAN<span>.CO.NZ</span></a>
+
+    <nav class="nav">
+      <a href="#shop">Shop</a>
+      <a href="#drops">Drops</a>
+      <a href="#about">About</a>
+      <a class="btn btn-small" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Aotearoa streetwear</p>
+        <h1>The Sensitive Bogan™</h1>
+        <p class="subhead">
+          Gritty tees. Desaturated florals. Feelings you’ll deny having.
+          Limited drops — once they’re gone, they’re history.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="#shop">Shop the drop</a>
+          <a class="btn btn-ghost" href="#drops">Get notified</a>
+        </div>
+
+        <div class="hero-badges">
+          <span>NZ-made vibes</span>
+          <span>Limited runs</span>
+          <span>Fast mobile site</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-top">
+          <p class="card-label">Featured</p>
+          <p class="card-title">“Sensitive Bogan” Tee</p>
+          <p class="card-note">Black tee • desaturated florals • clean print</p>
+        </div>
+        <div class="card-bottom">
+          <p class="price">$45 NZD</p>
+          <a class="btn btn-small" href="#contact" data-product="Sensitive Bogan Tee">Buy / Preorder</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="section-head">
+        <h2>Shop</h2>
+        <p>Start small. Sell hard. Keep it clean.</p>
+      </div>
+
+      <div class="grid">
+        <article class="product">
+          <div class="thumb"></div>
+          <h3>Sensitive Bogan Tee</h3>
+          <p class="muted">Black tee • floral mark • front print</p>
+          <div class="row">
+            <span class="price">$45</span>
+            <button class="btn btn-small" data-product="Sensitive Bogan Tee">Buy / Preorder</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="thumb thumb-2"></div>
+          <h3>Certified Chaos Unit (Kids)</h3>
+          <p class="muted">Toddler punk energy • bold type</p>
+          <div class="row">
+            <span class="price">$35</span>
+            <button class="btn btn-small" data-product="Certified Chaos Unit (Kids)">Buy / Preorder</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="thumb thumb-3"></div>
+          <h3>Kid Viscious (Kids)</h3>
+          <p class="muted">Little menace • big lettering</p>
+          <div class="row">
+            <span class="price">$35</span>
+            <button class="btn btn-small" data-product="Kid Viscious (Kids)">Buy / Preorder</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="thumb thumb-4"></div>
+          <h3>Prints & Posters</h3>
+          <p class="muted">Gig-poster grit • wall-worthy</p>
+          <div class="row">
+            <span class="price">from $20</span>
+            <button class="btn btn-small" data-product="Prints & Posters">Buy / Enquire</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="drops" class="section section-alt">
+      <div class="section-head">
+        <h2>Drops</h2>
+        <p>Limited runs. No endless restocks. That’s the whole point.</p>
+      </div>
+
+      <div class="drop">
+        <div>
+          <h3>Drop #01: Soft Violence</h3>
+          <p class="muted">
+            Desaturated florals, bold statements, clean compositions.
+            The kind of tee you can wear to a gig *and* a family BBQ.
+          </p>
+          <ul class="bullets">
+            <li>2–4 designs per drop</li>
+            <li>Preorders open 7 days</li>
+            <li>Printed & shipped in NZ</li>
+          </ul>
+        </div>
+
+        <div class="notify">
+          <h4>Get notified</h4>
+          <p class="muted">No spam. Just drop alerts and occasional nonsense.</p>
+          <form id="notifyForm">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="your@email.com" required />
+            <button class="btn btn-small" type="submit">Notify me</button>
+          </form>
+          <p id="notifyMsg" class="muted small"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>Some brands are born in boardrooms. This one crawled out of a shed with feelings.</p>
+      </div>
+
+      <div class="about">
+        <p>
+          <strong>BOGAN.CO.NZ</strong> is Kiwi-bogan culture with the volume turned down and the honesty turned up.
+          Rough edges. Soft insides. The jokes land because the truth is underneath.
+        </p>
+        <p class="muted">
+          Built for drop culture: simple, fast, and mobile-first. Your mates can actually open it without rage-quitting.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="section-head">
+        <h2>Contact / Orders</h2>
+        <p>Use this form for preorders, wholesale yarns, or existential questions.</p>
+      </div>
+
+      <form id="orderForm" class="contact">
+        <div class="two">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+          <div>
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="contactEmail" type="email" autocomplete="email" required />
+          </div>
+        </div>
+
+        <div>
+          <label for="product">Product</label>
+          <input id="product" name="product" placeholder="e.g., Sensitive Bogan Tee" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Size, colour, qty, delivery address, etc."></textarea>
+        </div>
+
+        <button class="btn" type="submit">Send</button>
+        <p id="orderMsg" class="muted small"></p>
+
+        <p class="muted small">
+          Or email: <a href="mailto:hello@bogan.co.nz">hello@bogan.co.nz</a> (set this up later)
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> BOGAN.CO.NZ — Made in NZ • Built for drops</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
