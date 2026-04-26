@@ -1,35 +1,57 @@
 const year = document.getElementById("year");
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
+if (year) year.textContent = new Date().getFullYear();
 
-const enquiryForm = document.getElementById("enquiryForm");
-const enquiryMsg = document.getElementById("enquiryMsg");
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.getElementById("site-nav");
 
-if (enquiryForm) {
-  enquiryForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (enquiryMsg) {
-      enquiryMsg.textContent =
-        "Enquiry saved locally. Next step: connect this form to Netlify Forms, Formspree, or your email handler.";
-    }
-
-    enquiryForm.reset();
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
 
-// Smooth scrolling for in-page anchor links
+const forms = [
+  {
+    formId: "notifyForm",
+    messageId: "notifyMsg",
+    text: "Thanks — you're on the update list. Connect this to your email platform when ready."
+  },
+  {
+    formId: "contactForm",
+    messageId: "contactMsg",
+    text: "Message saved locally. Next step: connect this form to your email or CRM handler."
+  }
+];
+
+forms.forEach(({ formId, messageId, text }) => {
+  const form = document.getElementById(formId);
+  const message = document.getElementById(messageId);
+
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (message) message.textContent = text;
+    form.reset();
+  });
+});
+
 const internalLinks = document.querySelectorAll('a[href^="#"]');
 internalLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    const targetId = link.getAttribute("href");
-    if (!targetId || targetId === "#") return;
+    const id = link.getAttribute("href");
+    if (!id || id === "#") return;
 
-    const targetEl = document.querySelector(targetId);
-    if (!targetEl) return;
+    const target = document.querySelector(id);
+    if (!target) return;
 
     event.preventDefault();
-    targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    if (nav && nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      navToggle?.setAttribute("aria-expanded", "false");
+    }
   });
 });
